@@ -18,6 +18,8 @@ const SingleInput = ({ placeholder, period, handleInputChange }) => {
   return (
     <input
       type="number"
+      pattern="[0-9]*"
+      inputmode="numeric"
       className="h-12 w-full rounded-md py-2 px-4 outline-none first-of-type:mb-4 focus:outline-none"
       placeholder={placeholder}
       period={period}
