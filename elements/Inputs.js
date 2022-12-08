@@ -17,7 +17,7 @@ const inputs = {
 const SingleInput = ({ placeholder, period, handleInputChange }) => {
   return (
     <input
-      type="text"
+      type="number"
       className="h-12 w-full rounded-md py-2 px-4 outline-none first-of-type:mb-4 focus:outline-none"
       placeholder={placeholder}
       period={period}

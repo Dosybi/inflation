@@ -47,6 +47,7 @@ export default function Home() {
         />
         <Tags onTagSelect={onTagSelect} />
         <Purchases
+          products={products}
           purchase={purchase}
           previousSalary={salary.previousSalary}
           currentSalary={salary.currentSalary}

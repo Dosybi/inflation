@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import { products } from '../data'
 
@@ -20,11 +20,13 @@ const SingleTag = ({ label, setTag, activeTag }) => {
 const Tags = ({ onTagSelect }) => {
   const [activeTag, setActiveTag] = useState('Хлеб')
 
-  const setTag = (name) => {
-    setActiveTag(activeTag === name ? '' : name)
-  }
+  // const setTag = (name) => {
+  //   setActiveTag(activeTag === name ? '' : name)
+  // }
 
-  onTagSelect(activeTag)
+  useEffect(() => {
+    onTagSelect(activeTag)
+  }, [activeTag])
 
   return (
     <div className="scrollbar-none -mx-8 mb-8 flex flex-row flex-nowrap gap-2 overflow-x-auto px-8 md:mx-0 md:flex-wrap md:overflow-visible md:px-0">
@@ -33,7 +35,7 @@ const Tags = ({ onTagSelect }) => {
           <SingleTag
             label={tag.label}
             key={tag.label}
-            setTag={setTag}
+            setTag={() => setActiveTag(tag.label)}
             activeTag={activeTag}
           />
         )

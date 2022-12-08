@@ -5,6 +5,11 @@ export const products = [
     currentPrice: 341,
   },
   {
+    label: 'Казы, кг',
+    previousPrice: 2054,
+    currentPrice: 12000,
+  },
+  {
     label: 'Молоко, л',
     previousPrice: 118,
     currentPrice: 320,
@@ -13,11 +18,6 @@ export const products = [
     label: 'Говядина, кг',
     previousPrice: 1129,
     currentPrice: 2600,
-  },
-  {
-    label: 'Казы, кг',
-    previousPrice: 2054,
-    currentPrice: 12000,
   },
   {
     label: 'Донер',
